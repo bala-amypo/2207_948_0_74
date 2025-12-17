@@ -2,7 +2,6 @@ package com.example.demo.entity;
 
 import jarkata.persistence.*;
 import jarkata.validation.constraints.*;
-
 @Entity 
 public class studentEntity {
     @Id
