@@ -7,7 +7,7 @@ import jarkata.validation.constraints.*;
 public class studentEntity {
     @Id
     @GeneratedValue(stratergy =GenerationType.IDENTITY)
-    private Lond id;
+    private Long id;
 
     @NotBlank(message=" Name is not Valid");
     private String name;
@@ -23,7 +23,7 @@ public class studentEntity {
         return id;
     }
     public studentEntity(){
-        
+
     }
         public studentEntity(Long id,String name,String email){
             this.id=id;
