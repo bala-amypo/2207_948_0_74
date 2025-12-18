@@ -32,21 +32,21 @@ public class StudentController {
 
     // READ BY ID
     @GetMapping("/{id}")
-    public StudentEntity getStudentById(@PathVariable int id) {
+    public StudentEntity getStudentById(@PathVariable Long id) {
         return studentService.getStudentById(id);
     }
 
     // UPDATE
     @PutMapping("/{id}")
     public StudentEntity updateStudent(
-            @PathVariable int id,
+            @PathVariable Long id,
             @RequestBody StudentEntity student) {
         return studentService.updateStudent(id, student);
     }
 
     // DELETE
     @DeleteMapping("/{id}")
-    public String deleteStudent(@PathVariable int id) {
+    public String deleteStudent(@PathVariable Long id) {
         studentService.deleteStudent(id);
         return "Student deleted successfully";
     }
