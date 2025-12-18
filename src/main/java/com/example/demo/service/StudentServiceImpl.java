@@ -30,18 +30,18 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public StudentEntity updateStudent(int id, StudentEntity student) {
+    public StudentEntity updateStudent(Long id, StudentEntity student) {
         student.setId(id); // important
         return studentRepo.save(student);
     }
 
     @Override
-    public void deleteStudent(int id) {
+    public void deleteStudent(Long id) {
         studentRepo.deleteById(id);
     }
 
     @Override
-    public StudentEntity getStudentById(int id) {
+    public StudentEntity getStudentById(Long id) {
     return studentRepo.findById(id)
             .orElseThrow(() ->
                 new StudentNotFoundException("Student not found with id: " + id)
