@@ -1,4 +1,4 @@
-package com.example.studentCrud.exception;
+package com.example.demo.exception;
 
 public class StudentNotFoundException extends RuntimeException {
 
